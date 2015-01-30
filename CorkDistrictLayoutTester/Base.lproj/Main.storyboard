@@ -8,7 +8,7 @@
         <!--Wine Tours-->
         <scene sceneID="lwF-tX-deT">
             <objects>
-                <viewController storyboardIdentifier="wineTour" title="Wine Tours" id="NT3-B7-Kma" customClass="WineTourViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Wine Tours" id="NT3-B7-Kma" customClass="WineTourViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Liz-Jc-RTf"/>
                         <viewControllerLayoutGuide type="bottom" id="Yom-bQ-v7F"/>
@@ -26,8 +26,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="returnHome:" destination="NT3-B7-Kma" eventType="touchUpInside" id="ekF-zk-dZc"/>
-                                    <segue destination="ww5-7z-PQc" kind="unwind" unwindAction="returnFromTourView:" id="rUv-pH-Cyg"/>
+                                    <action selector="returnToHomePage:" destination="NT3-B7-Kma" eventType="touchUpInside" id="cea-Pt-2Jy"/>
+                                    <segue destination="ww5-7z-PQc" kind="unwind" unwindAction="returnFromTourView:" id="3uh-6n-fcz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine Tours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1A-dk-3Pw">
@@ -54,7 +54,7 @@
         <!--View Map-->
         <scene sceneID="07o-9K-Akc">
             <objects>
-                <viewController title="View Map" id="Pll-6r-jl1" customClass="MapViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="View Map" id="Pll-6r-jl1" customClass="MapViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wJv-TJ-3Go"/>
                         <viewControllerLayoutGuide type="bottom" id="Lq0-oj-1zP"/>
@@ -98,7 +98,7 @@
         <!--Wineries-->
         <scene sceneID="fhE-NF-6Zc">
             <objects>
-                <viewController title="Wineries" id="6fo-zv-CWw" customClass="WineriesViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Wineries" id="6fo-zv-CWw" customClass="WineriesViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jeP-ic-o2A"/>
                         <viewControllerLayoutGuide type="bottom" id="JXL-7v-f9W"/>
@@ -144,7 +144,7 @@
         <!--Accomodations-->
         <scene sceneID="Imt-BM-tMY">
             <objects>
-                <viewController title="Accomodations" id="v6x-CE-lx0" customClass="AccomodationsViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Accomodations" id="v6x-CE-lx0" customClass="AccomodationsViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="26s-ao-jOm"/>
                         <viewControllerLayoutGuide type="bottom" id="I0U-Wl-6e6"/>
@@ -188,7 +188,7 @@
         <!--Packages-->
         <scene sceneID="1sl-zI-Rb6">
             <objects>
-                <viewController title="Packages" id="XIO-mm-5Zf" customClass="PackagesViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Packages" id="XIO-mm-5Zf" customClass="PackagesViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ill-YJ-b6t"/>
                         <viewControllerLayoutGuide type="bottom" id="asj-yy-UjN"/>
@@ -245,9 +245,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JnR-OI-tuC" id="dKw-j8-loP">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="NT3-B7-Kma" kind="presentation" id="BVS-oz-OlM"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="iqz-8H-Q9v">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -269,6 +266,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="atK-2a-Ig1" secondAttribute="trailing" constant="5" id="fE7-f5-lgV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NT3-B7-Kma" kind="presentation" modalTransitionStyle="flipHorizontal" id="wfK-Pk-qfb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="aMR-lM-2rM">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -291,7 +291,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Pll-6r-jl1" kind="presentation" id="bPE-t1-xZ7"/>
+                                            <segue destination="Pll-6r-jl1" kind="presentation" modalTransitionStyle="crossDissolve" id="bPE-t1-xZ7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="rTc-Kq-APE">
@@ -315,7 +315,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="6fo-zv-CWw" kind="presentation" id="eAE-bY-5LN"/>
+                                            <segue destination="6fo-zv-CWw" kind="presentation" modalTransitionStyle="partialCurl" id="eAE-bY-5LN"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="LKQ-TY-Be3">
@@ -407,7 +407,7 @@
         <!--Restaurants-->
         <scene sceneID="aaW-Pv-1fT">
             <objects>
-                <viewController title="Restaurants" id="saT-bB-cr1" customClass="RestaurantsViewController" customModule="CorkDistrictLayoutTester" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Restaurants" id="saT-bB-cr1" customClass="RestaurantsViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="znt-bq-HcJ"/>
                         <viewControllerLayoutGuide type="bottom" id="8El-u3-ymh"/>

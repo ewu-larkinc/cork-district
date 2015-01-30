@@ -11,8 +11,7 @@ import UIKit
 
 class WineTourViewController: UIViewController {
     
-    @IBAction func returnHome(AnyObject) {
-        println("returnHome method is executing...");
+    @IBAction func returnToHomePage(AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
